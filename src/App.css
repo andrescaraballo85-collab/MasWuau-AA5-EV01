@@ -1,0 +1,366 @@
+/* =========================================
+   ESTILOS PRINCIPALES - MASWUAU
+   ========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f6f9;
+  color: #2d3748;
+}
+
+/* Contenedor principal */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================================
+   ENCABEZADO
+   ========================================= */
+
+.app-header {
+  background: linear-gradient(135deg, #0f766e, #115e59);
+  color: white;
+  padding: 22px 40px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.app-header p {
+  margin: 5px 0 0;
+  opacity: 0.9;
+}
+
+/* =========================================
+   CONTENIDO
+   ========================================= */
+
+.main-content {
+  width: 90%;
+  max-width: 1200px;
+  margin: 35px auto;
+  flex: 1;
+}
+
+.page-title {
+  margin-bottom: 25px;
+}
+
+.page-title h2 {
+  margin-bottom: 5px;
+  color: #1f2937;
+}
+
+.page-title p {
+  margin-top: 0;
+  color: #6b7280;
+}
+
+/* =========================================
+   TARJETAS
+   ========================================= */
+
+.content-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card-header {
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+}
+
+.card-header h3 {
+  margin: 0;
+  color: #374151;
+}
+
+/* =========================================
+   FORMULARIO
+   ========================================= */
+
+.user-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 7px;
+  font-weight: bold;
+  color: #374151;
+}
+
+.form-group input,
+.form-group select {
+  padding: 11px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #0f766e;
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.12);
+}
+
+/* Mensajes de error */
+
+.error-message {
+  color: #dc2626;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+/* =========================================
+   BOTONES
+   ========================================= */
+
+.form-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.btn-primary,
+.btn-secondary {
+  border: none;
+  padding: 11px 18px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.btn-primary {
+  background-color: #0f766e;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #6b7280;
+  color: white;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* =========================================
+   TABLA
+   ========================================= */
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #f3f4f6;
+}
+
+th,
+td {
+  padding: 13px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+th {
+  color: #374151;
+  font-size: 14px;
+}
+
+td {
+  color: #4b5563;
+}
+
+/* Etiqueta del cargo */
+
+.role-badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background-color: #d1fae5;
+  color: #065f46;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* =========================================
+   PIE DE PÁGINA
+   ========================================= */
+
+.app-footer {
+  background-color: #1f2937;
+  color: white;
+  text-align: center;
+  padding: 18px;
+  margin-top: auto;
+}
+
+.app-footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* =========================================
+   DISEÑO RESPONSIVO
+   ========================================= */
+
+@media (max-width: 768px) {
+
+  .app-header {
+    padding: 20px;
+  }
+
+  .main-content {
+    width: 94%;
+  }
+
+  .user-form {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    grid-column: auto;
+  }
+
+}
+
+/* =========================================
+   MENSAJES DEL SISTEMA
+   ========================================= */
+
+.alert-message {
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 15px;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.alert-success {
+  background-color: #d1fae5;
+  color: #065f46;
+  border: 1px solid #10b981;
+}
+
+.alert-info {
+  background-color: #dbeafe;
+  color: #1e40af;
+  border: 1px solid #60a5fa;
+}
+
+.alert-close {
+  border: none;
+  background: transparent;
+  color: inherit;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.alert-close:hover {
+  opacity: 0.7;
+}
+
+.alert-error {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #ef4444;
+}
+
+/* =========================================
+   BÚSQUEDA DE USUARIOS
+   ========================================= */
+
+.search-container {
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.search-input:focus {
+  border-color: #0f766e;
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.12);
+}
+
+/* =========================================
+   ACCIONES DE LA TABLA
+   ========================================= */
+
+.table-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.btn-edit,
+.btn-delete {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.btn-edit {
+  background-color: #2563eb;
+  color: white;
+}
+
+.btn-delete {
+  background-color: #dc2626;
+  color: white;
+}
+
+.btn-edit:hover,
+.btn-delete:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
